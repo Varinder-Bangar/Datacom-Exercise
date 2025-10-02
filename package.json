@@ -1,0 +1,21 @@
+{
+  "name": "datacom-exercise-playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "bddgen": "npx bddgen",
+    "test": "npm run bddgen && npm run playwright-test",
+    "playwright-test": "npx playwright test --reporter=html,list",
+    "report": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "@playwright/test": "^1.55.1",
+    "@types/node": "^24.6.1",
+    "playwright-bdd": "^8.4.1"
+  }
+}
