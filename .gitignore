@@ -8,4 +8,4 @@ node_modules/
 /playwright/.auth/
 .DS_Store
 playwright-report/data/
-test-results/
+.features-gen/
