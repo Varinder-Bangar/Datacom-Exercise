@@ -7,6 +7,7 @@ class RegistrationPage {
     this.firstNameInput = page.locator('#firstName');
     this.lastNameLabel = page.locator('//input[@id = "lastName"]/preceding-sibling::label')
     this.lastNameInput = page.locator('#lastName');
+    this.lastNameHelpText = page.locator('#lnHelp');
     this.phoneNumberLabel = page.locator('//input[@id = "phone"]/preceding-sibling::label')
     this.phoneNumberInput = page.locator('#phone');
     this.phoneNumberHelpText = page.locator('#phoneHelp');
@@ -126,6 +127,16 @@ class RegistrationPage {
 
   async verifyErrorMessage(errorMessage) {
     await expect(this.message).toHaveText(errorMessage);
+  }
+
+  async verifyLabelText(labelLocator, expectedLabelText) {
+    const actualLabelText = await labelLocator.textContent();
+    expect(actualLabelText).toBe(expectedLabelText);
+  }
+
+  async verifyHelpText(helpTextLocator, expectedHelpText) {
+    const actualHelpText = await helpTextLocator.textContent();
+    expect(actualHelpText).toBe(expectedHelpText);
   }
 }
 
