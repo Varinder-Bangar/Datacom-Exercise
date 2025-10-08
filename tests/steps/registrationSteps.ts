@@ -32,4 +32,4 @@ Then('I should see the success message {string}', async ({ registrationPage }, s
 
 Then('I should see an error message {string}', async ({ registrationPage }, errorMessage) => {
   await registrationPage.verifyErrorMessage(errorMessage);
-});
+});   

@@ -1,7 +1,9 @@
 import { test as base } from 'playwright-bdd';
-import { RegistrationPage } from "../pages/registrationPageObj";
+import { RegistrationPage } from '../pages/registrationPageObj';
 
-export const test = base.extend({
+export const test = base.extend<{
+  registrationPage: RegistrationPage;
+}>({
   registrationPage: async ({ page }, use) => {
     await use(new RegistrationPage(page));
   }
